@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bankcardsystem?currentSchema=s_bankcard
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+server:
+  port: 8081
+
+LOG_PATH: resources/logs/mylog.log
