@@ -11,4 +11,5 @@ spring:
 server:
   port: 8081
 
-LOG_PATH: resources/logs/mylog.log
+logging:
+  config: classpath:logback.xml

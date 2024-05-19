@@ -10,9 +10,10 @@ import java.util.Optional;
 public interface BankCardRepository extends CrudRepository<BankCard, Long> {
 
     /**
-     * Ищет карту банка по номеру карты.
-     * @param cardNumber Номер карты.
-     * @return Карта банка с соответствующим номером или пустое значение, если карта не найдена.
+     * Retrieve a bank card by its card number.
+     *
+     * @param cardNumber the card number to search for
+     * @return the optional bank card found by the card number
      */
     Optional<BankCard> findByCardNumber(String cardNumber);
 }

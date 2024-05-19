@@ -2,7 +2,7 @@ package ru.trofimov.bankcards.domain;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Table(name = "BankCard", schema = "s_bankcard")
@@ -29,7 +29,7 @@ public class BankCard {
 
     @Column(name = "expiration_date")
     @Temporal(TemporalType.TIMESTAMP)
-    private LocalDateTime expirationDate;
+    private Date expirationDate;
 
     @Column(name = "cvc_code")
     private String cvcCode;
@@ -42,7 +42,7 @@ public class BankCard {
 
     @Column(name = "issue_date")
     @Temporal(TemporalType.TIMESTAMP)
-    private LocalDateTime issueDate;
+    private Date issueDate;
 
     @Column(name = "status")
     private String status;
@@ -61,7 +61,7 @@ public class BankCard {
 
     public BankCard() {}
 
-    public BankCard(Long id, String cardNumber, String cardholderName, String cardholderSurname, String issuingBank, String cardType, LocalDateTime expirationDate, String cvcCode, String paymentSystem, String additionalBenefits, LocalDateTime issueDate, String status, double balance, double creditLimit, double overdraftLimit, String currency) {
+    public BankCard(Long id, String cardNumber, String cardholderName, String cardholderSurname, String issuingBank, String cardType, Date expirationDate, String cvcCode, String paymentSystem, String additionalBenefits, Date issueDate, String status, double balance, double creditLimit, double overdraftLimit, String currency) {
         this.id = id;
         this.cardNumber = cardNumber;
         this.cardholderName = cardholderName;
@@ -128,11 +128,11 @@ public class BankCard {
         this.cardType = cardType;
     }
 
-    public LocalDateTime getExpirationDate() {
+    public Date getExpirationDate() {
         return expirationDate;
     }
 
-    public void setExpirationDate(LocalDateTime expirationDate) {
+    public void setExpirationDate(Date expirationDate) {
         this.expirationDate = expirationDate;
     }
 
@@ -160,11 +160,11 @@ public class BankCard {
         this.additionalBenefits = additionalBenefits;
     }
 
-    public LocalDateTime getIssueDate() {
+    public Date getIssueDate() {
         return issueDate;
     }
 
-    public void setIssueDate(LocalDateTime issueDate) {
+    public void setIssueDate(Date issueDate) {
         this.issueDate = issueDate;
     }
 

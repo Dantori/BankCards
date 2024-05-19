@@ -8,6 +8,7 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import ru.trofimov.bankcards.domain.BankCard;
 import ru.trofimov.bankcards.repository.BankCardRepository;
+import ru.trofimov.bankcards.service.impl.BankCardServiceImpl;
 
 import java.time.LocalDateTime;
 import java.util.List;
