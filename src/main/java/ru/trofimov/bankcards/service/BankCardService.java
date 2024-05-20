@@ -1,5 +1,6 @@
 package ru.trofimov.bankcards.service;
 
+import org.springframework.transaction.annotation.Transactional;
 import ru.trofimov.bankcards.domain.BankCard;
 
 import java.util.List;
